@@ -30,7 +30,12 @@ class MGQrCodeReader{
             $this->scaleSize = $sizeArray;
         }
     }
-
+    function readImg($tempImg)
+    {
+        $code = new \QrReader($tempImg, \QrReader::SOURCE_TYPE_FILE, false);
+        $text = $code->text();
+        return $text;
+    }
     public function read($url){
         $text = '';
         $imagePath = false;

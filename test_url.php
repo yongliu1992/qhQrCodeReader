@@ -15,7 +15,6 @@ $urls = [
 ];
 
 
-$MGQrCodeReader = new \MGQrCodeReader\MGQrCodeReader();
 
 foreach($urls as $index=>$url) {
 
